@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+.ham-menu {
+  display: none ;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .carddiv{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .carddetails{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .carddetailscontent{
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .searchfilterdiv{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+  }
+
+ 
+
+  .homediv{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .worldimage{
+    padding-left: 45px;
+  }
+
+  .explorebtn{
+    width: 40% !important;
+  }
+
+  .headerdiv{
+    display: grid;
+  }
+
+  .input{
+    width: 60% !important;
+  }
+
+  .footerdiv{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-content: center;
+    justify-items: center;
+  }
+
+  .aboutdiv{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-content: center;
+    justify-items: center;
+  }
+
+
+  .menu-web {
+    display: none;
+  }
+
+  .ham-menu {
+    display: inline-block;
+    cursor: pointer;
+    text-align: end;
+  }
+
+  .menu-mobile {
+    position: fixed;
+    top: 100px;
+    right: -300px; /* Hidden off-screen */
+    height: 100vh; /* Full height */
+    width: 300px; /* Control the width of the menu */
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px;
+    transition: right 0.3s ease-in-out; /* Smooth slide-in animation */
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    z-index: 1000;
+  }
+  
+  /* Active class to make it slide in */
+  .menu-mobile.active {
+    right: 0;
+  }
+
+  .menu-mobile ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & li:first-child {
+      margin-top: 1.2rem;
+    }
+
+    & li:last-child {
+      margin-bottom: 1.2rem;
+    }
+  }
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 3px solid black;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    position: absolute;
+    box-sizing: border-box;
+    left: 20px;
+    top: 31px;
+    border: 10px solid transparent;
+    border-right-color: black;
+    transform: rotate(-40deg);
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  
+  
+
+
+
+
+
